@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/adm-dashboard/static/css/main.a617e044.chunk.css",
+    "main.js": "/adm-dashboard/static/js/main.7d283365.chunk.js",
+    "main.js.map": "/adm-dashboard/static/js/main.7d283365.chunk.js.map",
+    "runtime-main.js": "/adm-dashboard/static/js/runtime-main.d93474a9.js",
+    "runtime-main.js.map": "/adm-dashboard/static/js/runtime-main.d93474a9.js.map",
+    "static/js/2.b9bbcc70.chunk.js": "/adm-dashboard/static/js/2.b9bbcc70.chunk.js",
+    "static/js/2.b9bbcc70.chunk.js.map": "/adm-dashboard/static/js/2.b9bbcc70.chunk.js.map",
+    "static/js/3.aa157b85.chunk.js": "/adm-dashboard/static/js/3.aa157b85.chunk.js",
+    "static/js/3.aa157b85.chunk.js.map": "/adm-dashboard/static/js/3.aa157b85.chunk.js.map",
+    "index.html": "/adm-dashboard/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/adm-dashboard/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.b9bbcc70.chunk.js.LICENSE.txt": "/adm-dashboard/static/js/2.b9bbcc70.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/adm-dashboard/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d93474a9.js",
+    "static/js/2.b9bbcc70.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.7d283365.chunk.js"
+  ]
+}
