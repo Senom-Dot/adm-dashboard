@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: 'https://attackz-api.herokuapp.com'
+    baseURL: process.env.REACT_APP_API || 'http://localhost:8000'
 });
