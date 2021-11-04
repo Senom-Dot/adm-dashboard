@@ -1,18 +1,15 @@
 import React from 'react';
+import { useAuth } from '../hooks/useAuth';
 
-import { 
-    BrowserRouter,
-    Route,
-    Switch
-} from 'react-router-dom';
-import { Home } from '../pages/home';
+import { App } from './app.routes';
+import { Auth } from './auth.routes';
 
 export function Routes() {
+    const { user } = useAuth();
+    
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" component={Home} exact/>
-            </Switch>
-        </BrowserRouter>
+        <>
+            { user ? <App/> : <Auth/> }
+        </>
     )
 }
