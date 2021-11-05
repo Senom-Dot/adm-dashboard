@@ -18,11 +18,15 @@ import { BiHide } from 'react-icons/bi';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { useHistory } from 'react-router';
+
 export function NewUser() {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
     const [showPass, setShowPass] = React.useState(false);
+
+    const history = useHistory();
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -37,6 +41,7 @@ export function NewUser() {
         })
         .then(() => {
             toast.success('User successfully created');
+            history.push('/');
         })
         .catch(err => {
             toast.error(String(err.response.data.en));
