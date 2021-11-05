@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import { api } from '../services/api';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const AuthContext = React.createContext();
 
 export function AuthProvider({ children }) {
@@ -25,7 +28,7 @@ export function AuthProvider({ children }) {
             
             setUser({ token: data.token });
         }).catch((err) => {
-            alert(err);
+            toast.error(err.response.data.en);
         });
     }
 
