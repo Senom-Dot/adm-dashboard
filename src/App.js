@@ -11,7 +11,7 @@ export default function App() {
         <AuthProvider>
             <GlobalStyle/>
             
-            <ToastContainer/>
+            <ToastContainer style={{ padding: '1rem' }}/>
 
             <Routes/>
         </AuthProvider>
