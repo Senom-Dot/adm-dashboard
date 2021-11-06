@@ -30,10 +30,12 @@ export function AuthProvider({ children }) {
             
             const user = userData.data;
 
-            if(user.user_type === 'common'){
+            if(user.user_type === 'admin'){
                 localStorage.setItem('@attackz:token', auth.access_token);
 
                 setUser({ id: user.id, user_name: user.user_name });
+
+                toast.success(`Welcome ${user.user_name}`)
             } else {
                 toast.error('This user does not have permission to access the panel');
             };
