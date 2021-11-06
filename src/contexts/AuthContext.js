@@ -40,7 +40,7 @@ export function AuthProvider({ children }) {
                 toast.error('This user does not have permission to access the panel');
             };
         } catch(err) {
-            toast.error(err.response.data.en);
+            toast.error(String(err.response.data.en));
         };
     }
 
