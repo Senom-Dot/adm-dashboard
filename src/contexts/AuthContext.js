@@ -14,31 +14,51 @@ export function AuthProvider({ children }) {
         username,
         password
     }) {
-        await api.post('/auth', {
-            username,
-            password
-        })
-
-        .then(response => {
-            const data = response.data
-
-            localStorage.setItem('@attackz:token', data.access_token);
-
-            api.defaults.headers.common.authorization = `Bearer ${data.token}`
+        try {
+            const response = await api.post('/auth', {
+                username,
+                password
+            });
             
-            setUser({ token: data.token });
-        }).catch((err) => {
+            const auth = response.data;
+
+            api.defaults.headers.common.authorization = `Bearer ${auth.access_token}`;
+
+            const userData = await api.get('/users', {
+                authorization: `Bearer ${auth.access_token}`
+            });
+            
+            const user = userData.data;
+
+            if(user.user_type === 'common'){
+                localStorage.setItem('@attackz:token', auth.access_token);
+
+                setUser({ id: user.id, user_name: user.user_name });
+            } else {
+                toast.error('This user does not have permission to access the panel');
+            };
+        } catch(err) {
             toast.error(err.response.data.en);
-        });
+        };
     }
 
     useEffect(() => {
         const token = localStorage.getItem('@attackz:token');
 
+        api.defaults.headers.common.authorization = `Bearer ${token}`;
+
         if(token){
-            api.defaults.headers.common.authorization = `Bearer ${token}`;
+            const validateToken = async () => await api.get('/users');
             
-            setUser(token)
+            validateToken()
+                .then(response => {
+                    const user = response.data;
+
+                    setUser({ id: user.id, user_name: user.user_name });
+                })
+                .catch(() => {
+                    toast.error('You need authenticate');
+                });
         }
     }, []);
 
