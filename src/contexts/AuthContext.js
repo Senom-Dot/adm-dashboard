@@ -32,6 +32,14 @@ export function AuthProvider({ children }) {
         });
     }
 
+    function signOut(){
+        localStorage.removeItem('@attackz:token');
+
+        setUser(null);
+
+        toast.success('Goodbye');
+    }
+
     useEffect(() => {
         const token = localStorage.getItem('@attackz:token');
 
@@ -43,7 +51,7 @@ export function AuthProvider({ children }) {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ signIn, user }}>
+        <AuthContext.Provider value={{ signIn, user, signOut }}>
             { children }
         </AuthContext.Provider>
     )
