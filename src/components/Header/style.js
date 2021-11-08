@@ -36,11 +36,12 @@ export const Nav = styled.nav`
     
     gap: 1rem;
 
-    .header__welcome {
+    .nav__welcome {
         color: var(--title-color);
         font-family: Roboto, sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1rem;
+        font-size: 0.9rem;
     }
 
     .nav__signOut {
