@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { Container } from "./style";
@@ -9,7 +10,7 @@ export function Dashboard() {
             <Header/>
 
             <Container>
-                <a href="/new-user">Create new user</a>
+                <Link to="/new-user">Create new user</Link>
             </Container>
         </>
     )
