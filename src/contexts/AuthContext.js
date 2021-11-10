@@ -54,9 +54,9 @@ export function AuthProvider({ children }) {
             
             validateToken()
                 .then(response => {
-                    const user = response.data;
+                    const { id, user_name } = response.data;
 
-                    setUser({ id: user.id, user_name: user.user_name });
+                    setUser({ id, user_name });
                 })
                 .catch(() => {
                     toast.error('You need authenticate');
