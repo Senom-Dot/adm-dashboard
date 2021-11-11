@@ -16,7 +16,7 @@ export function Header() {
     return (
         <Wrapper>
             <HeaderStyle>
-                <h1 className="header__title">Attackz</h1>
+                <h1 className="header__title"><strong>Att</strong>ackz</h1>
             </HeaderStyle>
 
             <Nav>

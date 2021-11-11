@@ -18,14 +18,18 @@ export const Wrapper = styled.div`
 export const HeaderStyle = styled.header`
     .header__title {
         font-size: 1.2rem;
-        font-family: Roboto, sans-serif;
-        font-weight: bold;
+        font-family: RobotoMedium, sans-serif;
+        font-weight: 600;
         color: var(--title-color);
 
         padding: 0.25rem 1rem;
         border: 1px solid #e6e8eb;
     
         border-radius: 1rem;
+        
+        strong {
+            color: #49bb25;
+        }
     }
 `;
 
