@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
     background: var(--white);
 
-    border-bottom: 2px solid #2d2929;
+    border-bottom: 1px solid #2d2929;
 
     padding: 1.5rem;
 `;
