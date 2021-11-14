@@ -8,12 +8,10 @@ export const showForm = keyframes`
 `;
 
 export const Container = styled.div`
-    height: 100vh;
-    width: 100%;
-
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    margin: 1.5rem;
 `;
 
 export const Main = styled.div`
@@ -41,7 +39,7 @@ export const Main = styled.div`
     @media(max-width: 968px){
         display: flex;
         
-        margin: 1rem;
+        margin: 1.5rem;
 
         max-width: 23rem;
     }
