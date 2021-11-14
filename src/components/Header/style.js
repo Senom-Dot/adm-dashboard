@@ -4,15 +4,21 @@ export const Wrapper = styled.div`
     height: 5rem;
     width: 100%;
     
+    position: fixed;
+    z-index: 1;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background: var(--white);
-
-    border-bottom: 1px solid #2d2929;
+    border-bottom: 1px solid #2d29292b;
 
     padding: 1.5rem;
+
+    @media(max-width: 768px){
+        position: relative;
+    }
 `;
 
 export const HeaderStyle = styled.header`

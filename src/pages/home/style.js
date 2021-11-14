@@ -8,10 +8,13 @@ export const showForm = keyframes`
 `;
 
 export const Container = styled.div`
+    height: 100vh;
+    
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    margin: 1.5rem;
+    padding-top: 5rem;
 `;
 
 export const Main = styled.div`
@@ -21,6 +24,7 @@ export const Main = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: center;
 
     transform: translateX(-10rem);
@@ -32,12 +36,15 @@ export const Main = styled.div`
     box-shadow: 10px 3px 20px rgb(58 58 1 / 10%);
     border-radius: 0.9rem;
 
-    gap: 1rem;
+    gap: 2rem;
 
     padding: 4rem 1rem;
 
     @media(max-width: 968px){
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
         margin: 1.5rem;
 
