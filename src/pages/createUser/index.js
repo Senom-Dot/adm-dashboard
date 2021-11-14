@@ -9,9 +9,11 @@ import {
     Input
 } from './style';
 
-import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
 import { Title } from '../../components/Title';
+
+import { Header } from '../../components/Header';
+import { SideBar } from '../../components/SideBar';
 
 import { BiHide } from 'react-icons/bi';
 
@@ -55,7 +57,9 @@ export function NewUser() {
     return (
         <>
             <Header/>
-        
+
+            <SideBar/>
+
             <Container>
                 <Section>
                     <Title text="Attackz" />
@@ -85,7 +89,7 @@ export function NewUser() {
                         <Button text="Save"/>
                     </Form>
                 </Section>
-            </Container>
-        </> 
+            </Container> 
+        </>
     )
 }

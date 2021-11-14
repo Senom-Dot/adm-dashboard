@@ -24,6 +24,8 @@ export const Section = styled.section`
 
     gap: 1rem;
 
+    margin-left: 18rem;
+
     .section__subtitle {
         font-family: Roboto, sans-serif;
         font-size: 1rem;
@@ -36,6 +38,7 @@ export const Section = styled.section`
 
     @media(max-width: 768px){
         max-width: 21.5rem;
+        margin: 1rem;
     }
 `;
 
