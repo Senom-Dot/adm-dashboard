@@ -12,15 +12,7 @@ export const Container = styled.section`
   background: #00000063;
 
   .error {
-    max-width: 30rem;
-    margin: 2rem;
-  }
-  
-  @media(max-width: 768px){
-    width: 23rem;
-
-    .error {
-      width: 20rem;
-    }
+    max-width: 20rem;
+    margin: 1.5rem;
   }
 `;

@@ -17,7 +17,7 @@ export function NotFound() {
             <Container>
                 <img className="error" src={NotFoundImage} alt="404"/>
 
-                <Link to="/">
+                <Link to="/" style={{ textDecoration: 'none' }}>
                     <Button text="Back to home"/>
                 </Link>
             </Container>
