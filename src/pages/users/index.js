@@ -25,6 +25,7 @@ export function Users() {
                     <Card>       
                         <Link to="/new-user">
                             <AiOutlineUserAdd size="50" color="#ffff"/>
+                            Create User
                         </Link>
                     </Card>
                 </Grid>

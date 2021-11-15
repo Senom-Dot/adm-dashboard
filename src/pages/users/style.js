@@ -58,21 +58,27 @@ export const Grid = styled.section`
 `;
 
 export const Card = styled.div`
-    height: 6rem;
-    width: 6rem;
+    height: 8rem;
+    width: 8rem;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
-    padding: 1rem;
+    padding: 1.5rem;
 
     border-radius: 1.2rem;
 
     background: #00b360;
 
     a {
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 1rem;
+        color: #fff;
+        text-decoration: none;
+
         cursor: pointer;
     }
 
