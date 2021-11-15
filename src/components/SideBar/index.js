@@ -20,7 +20,7 @@ export function SideBar() {
             <Aside>
                 <p className="subtitle">Navigation</p>
 
-                <ul>
+                <ul className="nav__menu">
                     <li>
                         <Link className="nav__button" to="/">
                             <AiOutlineHome /> Home
@@ -38,7 +38,7 @@ export function SideBar() {
 
                 <p className="subtitle">Configurations</p>
 
-                <ul>
+                <ul className="nav__menu">
                     <li>
                         <a className="nav__button" href="https://attackz-api.herokuapp.com/docs/">
                             <IoCodeSlashOutline/> Open API

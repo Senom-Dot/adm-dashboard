@@ -22,6 +22,10 @@ export const Aside = styled.aside`
     flex-direction: column;
     align-items: center;
 
+    .nav__menu {
+        list-style: none;
+    }
+
     .subtitle {
         font-family: Roboto,sans-serif;
         font-size: 1rem;
