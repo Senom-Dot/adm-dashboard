@@ -13,6 +13,8 @@ import { Button } from './../../components/Button/index';
 import { Title } from "../../components/Title";
 import { Header } from "../../components/Header";
 
+import { ClipLoader } from 'react-spinners';
+
 import { BiHide } from 'react-icons/bi';
 
 export function Home() {
@@ -21,7 +23,7 @@ export function Home() {
 
     const [showPass, setShowPass] = React.useState(false);
 
-    const { signIn } = useAuth();
+    const { signIn, isLoading } = useAuth();
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -30,7 +32,7 @@ export function Home() {
             return;
         }
 
-        await signIn({ username, password })
+        await signIn({ username, password });
     };
 
     function handleShow() {
@@ -67,7 +69,7 @@ export function Home() {
                             <i className="form__hideIcon" onClick={handleShow}><BiHide /></i>
                         </label>
 
-                        <Button text="SignIn" onClick={handleSubmit} />
+                        <Button text={!isLoading ? "SignIn" : <ClipLoader size="20" color="#ffff" />} onClick={handleSubmit} />
                     </Form>
                 </Main>
             </Container>
