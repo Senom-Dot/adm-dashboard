@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    height: 100vh;
     width: 100%;
+
+    background: #eeee;
 
     display: flex;
     justify-content: center;
 
-    padding: 1.5rem;
+    padding-top: 7rem;
+
+    @media(max-width: 768px){
+        padding: 1.5rem;
+    }
 `;
 
 export const Section = styled.section`
