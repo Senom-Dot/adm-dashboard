@@ -11,6 +11,10 @@ export const Container = styled.section`
 
   background: #00000063;
 
+  a {
+    text-decoration: none;
+  }
+
   .error {
     max-width: 20rem;
     margin: 1.5rem;
