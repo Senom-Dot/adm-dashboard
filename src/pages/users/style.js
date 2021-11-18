@@ -4,6 +4,7 @@ export const Container = styled.div`
     height: 100vh;
 
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
     margin-left: 18rem;
@@ -29,6 +30,13 @@ export const Container = styled.div`
         strong {
             color: #49bb25;
         }
+    }
+
+    .loading {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
     }
 
     @media(max-width: 768px){
