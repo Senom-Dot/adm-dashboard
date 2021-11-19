@@ -38,6 +38,7 @@ export const GlobalStyle = createGlobalStyle`
         --title-color: #08241d;
         --button-color: #08241d;
         --white: #ffffff;
+        --black-color: #000000;
     }
 
     // Global Custom Fonts
