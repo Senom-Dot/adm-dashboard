@@ -47,7 +47,7 @@ export const Nav = styled.nav`
     gap: 1rem;
 
     .nav__welcome {
-        color: var(--title-color);
+        color: var(--black-color);
         font-family: Roboto, sans-serif;
         font-weight: 400;
         line-height: 1rem;
