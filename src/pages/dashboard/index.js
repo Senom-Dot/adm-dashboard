@@ -23,14 +23,14 @@ export function Dashboard() {
                 </div>
                 
                 <Grid>
-                    <Card>       
+                    <Card color="#00b360">
                         <Link to="/users">
                             <FiUsers size="50" color="#ffff"/>
                             Users
                         </Link>
                     </Card>
 
-                    <Card style={{ background: '#136897'}}>       
+                    <Card color="#1347bb">       
                         <Link to="/settings">
                             <GoSettings size="50" color="#ffff"/>
                             Settings

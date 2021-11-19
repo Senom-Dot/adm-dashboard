@@ -70,13 +70,13 @@ export const Card = styled.div`
 
     border-radius: 1.2rem;
 
-    background: #00b360;
+    background: ${props => props.color};
 
     a {
         text-align: center;
         font-family: Roboto, sans-serif;
         font-size: 1rem;
-        color: #fff;
+        color: var(--white);
         text-decoration: none;
 
         cursor: pointer;
