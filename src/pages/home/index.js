@@ -69,7 +69,7 @@ export function Home() {
                             <i className="form__hideIcon" onClick={handleShow}><BiHide /></i>
                         </label>
 
-                        <Button text={!isLoading ? "SignIn" : <ClipLoader size="20" color="#ffff" />} onClick={handleSubmit} />
+                        <Button text={!isLoading ? "SignIn" : <ClipLoader size="20px" color="#ffff" />} onClick={handleSubmit} />
                     </Form>
                 </Main>
             </Container>
