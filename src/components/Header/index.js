@@ -19,13 +19,17 @@ export function Header() {
                 <h1 className="header__title"><strong>Att</strong>ackz</h1>
             </HeaderStyle>
 
-            <Nav>
-                <p className="nav__welcome">
-                    Welcome, { user.user_name }
-                </p>
+            {
+                user && (
+                    <Nav>
+                        <p className="nav__welcome">
+                            Welcome, { user.user_name }
+                        </p>
 
-                <button className="nav__signOut" onClick={signOut}><FaSignOutAlt /></button>
-            </Nav>
+                        <button className="nav__signOut" onClick={signOut}><FaSignOutAlt /></button>
+                    </Nav>
+                )
+            }
         </Wrapper>
     )
 }

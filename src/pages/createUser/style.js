@@ -1,12 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    height: 100vh;
     width: 100%;
+
+    background: #eeee;
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    
+    align-items: center;
 
-    padding: 1.5rem;
+    padding-top: 7rem;
+
+    @media(max-width: 768px){
+        padding: 1.5rem;
+    }
 `;
 
 export const Section = styled.section`
@@ -24,6 +34,8 @@ export const Section = styled.section`
 
     gap: 1rem;
 
+    margin-left: 18rem;
+
     .section__subtitle {
         font-family: Roboto, sans-serif;
         font-size: 1rem;
@@ -36,6 +48,7 @@ export const Section = styled.section`
 
     @media(max-width: 768px){
         max-width: 21.5rem;
+        margin: 1rem;
     }
 `;
 

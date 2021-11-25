@@ -4,15 +4,21 @@ export const Wrapper = styled.div`
     height: 5rem;
     width: 100%;
     
+    position: fixed;
+    z-index: 1;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background: var(--white);
-
-    border-bottom: 1px solid #2d2929;
+    border-bottom: 1px solid #2d29292b;
 
     padding: 1.5rem;
+
+    @media(max-width: 768px){
+        position: relative;
+    }
 `;
 
 export const HeaderStyle = styled.header`
@@ -41,7 +47,7 @@ export const Nav = styled.nav`
     gap: 1rem;
 
     .nav__welcome {
-        color: var(--title-color);
+        color: var(--black-color);
         font-family: Roboto, sans-serif;
         font-weight: 400;
         line-height: 1rem;
