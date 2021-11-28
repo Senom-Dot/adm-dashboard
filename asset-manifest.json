@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.js": "/adm-dashboard/static/js/main.ba0714e6.chunk.js",
-    "main.js.map": "/adm-dashboard/static/js/main.ba0714e6.chunk.js.map",
+    "main.js": "/adm-dashboard/static/js/main.bd7d595e.chunk.js",
+    "main.js.map": "/adm-dashboard/static/js/main.bd7d595e.chunk.js.map",
     "runtime-main.js": "/adm-dashboard/static/js/runtime-main.909a9d2b.js",
     "runtime-main.js.map": "/adm-dashboard/static/js/runtime-main.909a9d2b.js.map",
     "static/css/2.58a45539.chunk.css": "/adm-dashboard/static/css/2.58a45539.chunk.css",
-    "static/js/2.df34afcb.chunk.js": "/adm-dashboard/static/js/2.df34afcb.chunk.js",
-    "static/js/2.df34afcb.chunk.js.map": "/adm-dashboard/static/js/2.df34afcb.chunk.js.map",
+    "static/js/2.a8c0e60e.chunk.js": "/adm-dashboard/static/js/2.a8c0e60e.chunk.js",
+    "static/js/2.a8c0e60e.chunk.js.map": "/adm-dashboard/static/js/2.a8c0e60e.chunk.js.map",
     "index.html": "/adm-dashboard/index.html",
     "static/css/2.58a45539.chunk.css.map": "/adm-dashboard/static/css/2.58a45539.chunk.css.map",
-    "static/js/2.df34afcb.chunk.js.LICENSE.txt": "/adm-dashboard/static/js/2.df34afcb.chunk.js.LICENSE.txt",
+    "static/js/2.a8c0e60e.chunk.js.LICENSE.txt": "/adm-dashboard/static/js/2.a8c0e60e.chunk.js.LICENSE.txt",
+    "static/media/404.8445f9eb.svg": "/adm-dashboard/static/media/404.8445f9eb.svg",
     "static/media/Roboto-Regular.a8d6ac03.ttf": "/adm-dashboard/static/media/Roboto-Regular.a8d6ac03.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.909a9d2b.js",
     "static/css/2.58a45539.chunk.css",
-    "static/js/2.df34afcb.chunk.js",
-    "static/js/main.ba0714e6.chunk.js"
+    "static/js/2.a8c0e60e.chunk.js",
+    "static/js/main.bd7d595e.chunk.js"
   ]
 }
