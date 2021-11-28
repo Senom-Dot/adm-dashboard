@@ -1,17 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
     height: 100vh;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 
     margin-left: 18rem;
+
     padding-top: 5rem;
 
     background: #eeee;
-    
+
     .container__title {
         padding: 2rem;
         
@@ -45,7 +46,7 @@ export const Grid = styled.section`
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     margin: 2rem;
 
@@ -70,13 +71,13 @@ export const Card = styled.div`
 
     border-radius: 1.2rem;
 
-    background: ${props => props.color};
+    background: #00b360;
 
     a {
         text-align: center;
         font-family: Roboto, sans-serif;
         font-size: 1rem;
-        color: var(--white);
+        color: #fff;
         text-decoration: none;
 
         cursor: pointer;

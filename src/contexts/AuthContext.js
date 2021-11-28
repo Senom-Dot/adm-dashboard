@@ -9,12 +9,15 @@ export const AuthContext = React.createContext();
 
 export function AuthProvider({ children }) {
     const [user, setUser] = React.useState(null);
-
+    const [isLoading, setIsLoading] = React.useState(false);
+    
     async function signIn({
         username,
         password
     }) {
         try {
+            setIsLoading(true);
+
             const response = await api.post('/auth', {
                 username,
                 password
@@ -38,9 +41,11 @@ export function AuthProvider({ children }) {
                 toast.success(`Welcome ${user.user_name}`)
             } else {
                 toast.error('This user does not have permission to access the panel');
+                setIsLoading(false);
             };
         } catch(err) {
             toast.error(String(err.response.data.en));
+            setIsLoading(false);
         };
     }
 
@@ -77,7 +82,7 @@ export function AuthProvider({ children }) {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ signIn, user, signOut }}>
+        <AuthContext.Provider value={{ signIn, user, signOut, isLoading }}>
             { children }
         </AuthContext.Provider>
     )

@@ -9,18 +9,24 @@ import {
     Input
 } from './style';
 
-import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
 import { Title } from '../../components/Title';
+
+import { Header } from '../../components/Header';
+import { SideBar } from '../../components/SideBar';
 
 import { BiHide } from 'react-icons/bi';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { ClipLoader } from 'react-spinners';
+
 import { useHistory } from 'react-router';
 
 export function NewUser() {
+    const [isLoading, setIsLoading] = React.useState(false);
+
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -35,6 +41,8 @@ export function NewUser() {
             return;
         }
         
+        setIsLoading(true);
+
         await api.post('/users', {
             username,
             password
@@ -45,6 +53,7 @@ export function NewUser() {
         })
         .catch(err => {
             toast.error(String(err.response.data.en));
+            setIsLoading(false);
         });
     }
 
@@ -55,7 +64,9 @@ export function NewUser() {
     return (
         <>
             <Header/>
-        
+
+            <SideBar/>
+
             <Container>
                 <Section>
                     <Title text="Attackz" />
@@ -82,10 +93,10 @@ export function NewUser() {
                             <i className="form__hideIcon" onClick={handleShow}><BiHide /></i>
                         </label>
 
-                        <Button text="Save"/>
+                        <Button text={!isLoading ? "Save" : <ClipLoader size="20px" color="#ffff" />} onClick={handleSubmit} />
                     </Form>
                 </Section>
-            </Container>
-        </> 
+            </Container> 
+        </>
     )
 }
