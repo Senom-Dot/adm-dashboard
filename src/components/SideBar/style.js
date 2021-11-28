@@ -8,10 +8,12 @@ export const Container = styled.div`
 
     position: fixed;
 
+    z-index: 1;
+
     top: 5rem;
 
     @media(max-width: 768px){
-        display: none;
+        position: absolute;
     }
 `;
 

@@ -7,8 +7,6 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    margin-left: 18rem;
-
     padding-top: 5rem;
 
     background: #eeee;
@@ -46,7 +44,7 @@ export const Grid = styled.section`
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 7fr;
 
     margin: 2rem;
 
@@ -71,7 +69,7 @@ export const Card = styled.div`
 
     border-radius: 1.2rem;
 
-    background: #00b360;
+    background: ${props => props.color};
 
     a {
         text-align: center;

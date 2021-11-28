@@ -7,7 +7,6 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 18rem;
     padding-top: 5rem;
 
     background: #eeee;
@@ -45,7 +44,7 @@ export const Grid = styled.section`
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 7fr;
 
     margin: 2rem;
 
@@ -54,6 +53,8 @@ export const Grid = styled.section`
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
+
+        gap: 1rem;
     }
 `;
 

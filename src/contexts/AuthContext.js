@@ -10,7 +10,10 @@ export const AuthContext = React.createContext();
 export function AuthProvider({ children }) {
     const [user, setUser] = React.useState(null);
     const [isLoading, setIsLoading] = React.useState(false);
+    const [hamburguer, showHamburguer] = React.useState(false);
     
+    const isAuthenticated = !!user;
+
     async function signIn({
         username,
         password
@@ -72,13 +75,25 @@ export function AuthProvider({ children }) {
                     setUser({ id, user_name });
                 })
                 .catch(() => {
+                    setUser(null);
+                    
+                    localStorage.removeItem('@attackz:token');
+
                     toast.error('You need authenticate');
                 });
         }
     }, []);
 
     return (
-        <AuthContext.Provider value={{ signIn, user, signOut, isLoading }}>
+        <AuthContext.Provider value={{ 
+            signIn,
+            user,
+            signOut,
+            isLoading,
+            isAuthenticated,
+            hamburguer,
+            showHamburguer
+        }}>
             { children }
         </AuthContext.Provider>
     )

@@ -34,8 +34,6 @@ export const Section = styled.section`
 
     gap: 1rem;
 
-    margin-left: 18rem;
-
     .section__subtitle {
         font-family: Roboto, sans-serif;
         font-size: 1rem;
