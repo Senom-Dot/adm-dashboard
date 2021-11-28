@@ -67,6 +67,10 @@ export function AuthProvider({ children }) {
                     setUser({ id, user_name });
                 })
                 .catch(() => {
+                    setUser(null);
+                    
+                    localStorage.removeItem('@attackz:token');
+
                     toast.error('You need authenticate');
                 });
         }
