@@ -8,8 +8,10 @@ export const Container = styled.div`
     justify-content: center;
 
     padding-top: 5rem;
+    
+    margin-left: 5rem;
 
-    background: #eeee;
+    background: var(--background-sub);
     
     .container__title {
         padding: 2rem;
@@ -35,7 +37,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
 
-        margin-left: 0;
+        margin-left: 4rem;
         padding-top: 0;
     }
 `;

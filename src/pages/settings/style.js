@@ -6,11 +6,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin-left: 18rem;
-
     padding-top: 5rem;
 
-    background: #eeee;
+    margin-left: 5rem;
+
+    background: var(--background-sub);
 
     .container__title {
         padding: 2rem;
@@ -34,9 +34,8 @@ export const Container = styled.div`
     @media(max-width: 768px){
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
-        margin-left: 0;
+        margin-left: 4rem;
         padding-top: 0;
     }
 `;

@@ -4,7 +4,7 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
 
-    background: #eeee;
+    background: var(--background-sub);
 
     display: flex;
     justify-content: center;
@@ -31,6 +31,8 @@ export const Section = styled.section`
     border-radius: 0.9rem;
 
     padding: 4rem 1rem;
+
+    margin-left: 5rem;
 
     gap: 1rem;
 
