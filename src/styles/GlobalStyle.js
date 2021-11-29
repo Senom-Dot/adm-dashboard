@@ -35,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     
     :root {
         --background: #08241d;
+        --background-sub: #eeee;
         --title-color: #08241d;
         --button-color: #08241d;
         --white: #ffffff;
