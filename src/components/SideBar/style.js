@@ -39,7 +39,7 @@ export const Aside = styled.aside`
     flex-direction: column;
     align-items: center;
 
-    margin-top: 4rem;
+    margin-top: 1.2rem;
 
     .nav__menu {
         list-style: none;
