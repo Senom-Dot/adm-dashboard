@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Aside, Container } from "./style";
+import { 
+    Container,
+    Aside,
+    AsideMobile,
+    ContainerMobile
+} from "./style";
 
 import { useAuth } from "../../hooks/useAuth";
 
@@ -22,7 +27,7 @@ export function SideBar() {
     return (
         <>
             {
-                hamburguer && (
+                hamburguer ? (
                     <Container>
                         <Aside>
                             <p className="subtitle">Navigation</p>
@@ -58,6 +63,38 @@ export function SideBar() {
                             </ul>
                         </Aside>
                     </Container>
+                ) : (
+                    <ContainerMobile>
+                         <AsideMobile>
+                            <ul className="nav__menu">
+                                <li>
+                                    <Link className="nav__button" to="/">
+                                        <AiOutlineHome />
+                                    </Link>
+                                </li>
+                                
+                                <li>
+                                    <Link className="nav__button" to="/users"><FiUsers/></Link>
+                                </li>
+
+                                <li>
+                                    <Link className="nav__button" to="/settings"><GoSettings/></Link>
+                                </li>
+                            </ul>
+
+                            <ul className="nav__menu">
+                                <li>
+                                    <a className="nav__button" href="https://attackz-api.herokuapp.com/docs/">
+                                        <IoCodeSlashOutline/>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <button className="signOut" onClick={signOut}> <FaSignOutAlt /></button>
+                                </li>
+                            </ul>
+                        </AsideMobile>
+                    </ContainerMobile>
                 )
             }
         </>
