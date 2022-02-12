@@ -15,6 +15,12 @@ export const Container = styled.div`
     align-items: center;
 
     padding-top: 5rem;
+
+    @media(max-width: 768px){
+        display: flex;
+
+        margin-top: -5rem;
+    }
 `;
 
 export const Main = styled.div`

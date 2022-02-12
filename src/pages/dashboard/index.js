@@ -19,7 +19,7 @@ export function Dashboard() {
             
             <Container>
                 <div className="container__title">
-                    <h2 className="title"><strong>Dashboard</strong></h2>
+                    <h2 className="title"><strong>Dashboard</strong> | Home</h2>
                 </div>
                 
                 <Grid>

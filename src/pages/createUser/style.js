@@ -4,7 +4,7 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
 
-    background: #eeee;
+    background: var(--background-sub);
 
     display: flex;
     justify-content: center;
@@ -32,9 +32,9 @@ export const Section = styled.section`
 
     padding: 4rem 1rem;
 
-    gap: 1rem;
+    margin-left: 5rem;
 
-    margin-left: 18rem;
+    gap: 1rem;
 
     .section__subtitle {
         font-family: Roboto, sans-serif;

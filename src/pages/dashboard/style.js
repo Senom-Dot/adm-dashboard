@@ -7,10 +7,11 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    margin-left: 18rem;
     padding-top: 5rem;
+    
+    margin-left: 5rem;
 
-    background: #eeee;
+    background: var(--background-sub);
     
     .container__title {
         padding: 2rem;
@@ -36,7 +37,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
 
-        margin-left: 0;
+        margin-left: 4rem;
         padding-top: 0;
     }
 `;
@@ -45,7 +46,7 @@ export const Grid = styled.section`
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 7fr;
 
     margin: 2rem;
 
@@ -54,6 +55,8 @@ export const Grid = styled.section`
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
+
+        gap: 1rem;
     }
 `;
 

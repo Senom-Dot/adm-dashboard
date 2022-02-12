@@ -22,6 +22,9 @@ export const Wrapper = styled.div`
 `;
 
 export const HeaderStyle = styled.header`
+    display: flex;
+    justify-content: space-between;
+
     .header__title {
         font-size: 1.2rem;
         font-family: RobotoMedium, sans-serif;
@@ -35,6 +38,24 @@ export const HeaderStyle = styled.header`
         
         strong {
             color: #49bb25;
+        }
+    }
+
+    .header__hamburguer {
+        display: flex;
+
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        font-size: 1.3rem;
+
+        margin-left: 0.1rem;
+
+        color: #2e384d;
+        
+        &:hover {
+            filter: brightness(0.9);
         }
     }
 `;

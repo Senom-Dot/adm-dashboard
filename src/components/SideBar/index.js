@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Aside, Container } from "./style";
+import { 
+    Container,
+    Aside,
+    AsideMobile,
+    ContainerMobile
+} from "./style";
 
 import { useAuth } from "../../hooks/useAuth";
 
@@ -13,43 +18,85 @@ import { IoCodeSlashOutline } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 
 export function SideBar() {
-    const { signOut } = useAuth();
+    const { 
+        signOut,
+        hamburguer, 
+        showHamburguer
+    } = useAuth();
 
     return (
-        <Container>
-            <Aside>
-                <p className="subtitle">Navigation</p>
+        <>
+            {
+                hamburguer ? (
+                    <Container>
+                        <Aside>
+                            <p className="subtitle">Navigation</p>
 
-                <ul className="nav__menu">
-                    <li>
-                        <Link className="nav__button" to="/">
-                            <AiOutlineHome /> Home
-                        </Link>
-                    </li>
-                    
-                    <li>
-                        <Link className="nav__button" to="/users"><FiUsers/> Users</Link>
-                    </li>
+                            <ul className="nav__menu">
+                                <li>
+                                    <Link className="nav__button" to="/" onClick={() => showHamburguer(false)}>
+                                        <AiOutlineHome /> Home
+                                    </Link>
+                                </li>
+                                
+                                <li>
+                                    <Link className="nav__button" to="/users" onClick={() => showHamburguer(false)}><FiUsers/> Users</Link>
+                                </li>
 
-                    <li>
-                        <Link className="nav__button" to="/settings"><GoSettings/> Settings</Link>
-                    </li>
-                </ul>
+                                <li>
+                                    <Link className="nav__button" to="/settings" onClick={() => showHamburguer(false)}><GoSettings/> Settings</Link>
+                                </li>
+                            </ul>
 
-                <p className="subtitle">Configurations</p>
+                            <p className="subtitle">Configurations</p>
 
-                <ul className="nav__menu">
-                    <li>
-                        <a className="nav__button" href="https://attackz-api.herokuapp.com/docs/">
-                            <IoCodeSlashOutline/> Open API
-                        </a>
-                    </li>
+                            <ul className="nav__menu">
+                                <li>
+                                    <a className="nav__button" href="https://attackz-api.herokuapp.com/docs/">
+                                        <IoCodeSlashOutline/> Open API
+                                    </a>
+                                </li>
 
-                    <li>
-                        <button className="signOut" onClick={signOut}> <FaSignOutAlt /> Logout</button>
-                    </li>
-                </ul>
-            </Aside>
-        </Container>
+                                <li>
+                                    <button className="signOut" onClick={signOut}> <FaSignOutAlt /> Logout</button>
+                                </li>
+                            </ul>
+                        </Aside>
+                    </Container>
+                ) : (
+                    <ContainerMobile>
+                         <AsideMobile>
+                            <ul className="nav__menu">
+                                <li>
+                                    <Link className="nav__button" to="/">
+                                        <AiOutlineHome />
+                                    </Link>
+                                </li>
+                                
+                                <li>
+                                    <Link className="nav__button" to="/users"><FiUsers/></Link>
+                                </li>
+
+                                <li>
+                                    <Link className="nav__button" to="/settings"><GoSettings/></Link>
+                                </li>
+                            </ul>
+
+                            <ul className="nav__menu">
+                                <li>
+                                    <a className="nav__button" href="https://attackz-api.herokuapp.com/docs/">
+                                        <IoCodeSlashOutline/>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <button className="signOut" onClick={signOut}> <FaSignOutAlt /></button>
+                                </li>
+                            </ul>
+                        </AsideMobile>
+                    </ContainerMobile>
+                )
+            }
+        </>
     )
 }

@@ -9,14 +9,22 @@ import {
 } from './style';
 
 import { FaSignOutAlt } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 export function Header() {
-    const { signOut, user } = useAuth();
+    const { 
+        signOut,
+        user,
+        isAuthenticated,
+        showHamburguer,
+        hamburguer
+    } = useAuth();
     
     return (
         <Wrapper>
             <HeaderStyle>
                 <h1 className="header__title"><strong>Att</strong>ackz</h1>
+                { isAuthenticated && <button className="header__hamburguer" onClick={() => showHamburguer(!hamburguer)}><GiHamburgerMenu size="30px"/></button> }
             </HeaderStyle>
 
             {

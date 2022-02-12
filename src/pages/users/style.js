@@ -7,11 +7,11 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    margin-left: 18rem;
-
     padding-top: 5rem;
 
-    background: #eeee;
+    margin-left: 5rem;
+
+    background: var(--background-sub);
 
     .container__title {
         padding: 2rem;
@@ -37,7 +37,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: center;
 
-        margin-left: 0;
+        margin-left: 4rem;
         padding-top: 0;
     }
 `;
@@ -46,7 +46,7 @@ export const Grid = styled.section`
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 7fr;
 
     margin: 2rem;
 
@@ -71,7 +71,7 @@ export const Card = styled.div`
 
     border-radius: 1.2rem;
 
-    background: #00b360;
+    background: ${props => props.color};
 
     a {
         text-align: center;
